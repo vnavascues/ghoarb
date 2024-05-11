@@ -1,0 +1,44 @@
+{
+  "name": "@vnavascues/craftathon",
+  "description": "Craft task that mixes GHO and DeFi",
+  "version": "1.0.0",
+  "author": {
+    "name": "vnavascues",
+    "url": "https://github.com/vnavascues"
+  },
+  "dependencies": {
+    "@chainlink/contracts": "1.1.0",
+    "@openzeppelin/contracts": "^5.0.1",
+    "aave-address-book": "github:bgd-labs/aave-address-book#v2.26.1",
+    "aave-v3-core": "github:aave/aave-v3-core#v1.19.3",
+    "gho-core": "github:aave/gho-core#f02f874",
+    "uniswap-v3-core": "github:uniswap/v3-core#d8b1c63",
+    "uniswap-v3-periphery": "github:uniswap/v3-periphery#697c247"
+  },
+  "devDependencies": {
+    "forge-std": "github:foundry-rs/forge-std#v1.8.1",
+    "prettier": "^3.0.0",
+    "solhint": "^3.6.2"
+  },
+  "keywords": [
+    "blockchain",
+    "ethereum",
+    "forge",
+    "foundry",
+    "smart-contracts",
+    "solidity",
+    "template"
+  ],
+  "private": true,
+  "scripts": {
+    "clean": "rm -rf cache out",
+    "build": "forge build",
+    "lint": "bun run lint:sol && bun run prettier:check",
+    "lint:sol": "forge fmt --check && bun solhint {script,src,test}/**/*.sol",
+    "prettier:check": "prettier --check \"**/*.{json,md,yml}\" --ignore-path \".prettierignore\"",
+    "prettier:write": "prettier --write \"**/*.{json,md,yml}\" --ignore-path \".prettierignore\"",
+    "test": "forge test",
+    "test:coverage": "forge coverage",
+    "test:coverage:report": "forge coverage --report lcov && genhtml lcov.info --branch-coverage --output-dir coverage"
+  }
+}

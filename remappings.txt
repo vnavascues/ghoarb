@@ -1,0 +1,9 @@
+@aave/core-v3/=node_modules/aave-v3-core/
+@chainlink/contracts/=node_modules/@chainlink/contracts/
+@openzeppelin/contracts/=node_modules/@openzeppelin/contracts/
+forge-std/=node_modules/forge-std/
+gho-core/=node_modules/gho-core/src/
+src/=src/
+test/=test/
+uniswap-v3-core/=node_modules/uniswap-v3-core/
+uniswap-v3-periphery/=node_modules/uniswap-v3-periphery/
